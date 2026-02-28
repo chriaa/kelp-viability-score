@@ -1,0 +1,5 @@
+Manifest file for knb-lter-sbc.14.14.zip created on Sat Feb 28 19:16:04 UTC 2026
+Historical_Kelp_Data.csv (2133996 bytes)
+knb-lter-sbc.14.14.xml (32219 bytes)
+knb-lter-sbc.14.14.txt (16133 bytes)
+knb-lter-sbc.14.14.report.xml (35374 bytes)

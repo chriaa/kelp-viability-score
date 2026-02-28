@@ -1,0 +1,565 @@
+
+  
+    
+      uid=SBC,o=EDI,dc=ecoinformatics,dc=org
+      all
+    
+    
+      uid=lkui,o=EDI,dc=ecoinformatics,dc=org
+      all
+    
+    
+      public
+      read
+    
+  
+  
+    knb-lter-sbc.14
+    doi:10.6073/pasta/e050dec7b126e00e27e0b44459f0ac94Reef historical kelp
+    SBC LTER: Reef: Historical Kelp Database for giant kelp (Macrocystis pyrifera) biomass in California and Mexico
+    
+      Daniel Reed
+      			Marine Science Institute
+			University of California
+			Santa Barbara, CA 93106-6150  US
+      805-893-8363
+      805-893-8062
+      dan.reed@lifesci.ucsb.edu
+    
+    
+      Santa Barbara Coastal LTER
+      			Marine Science Institute
+			University of California
+			Santa Barbara, CA 93106  USA
+      sbclter@msi.ucsb.edu
+    
+    
+      Shannon Harrer
+      Lead field technician, analyst
+      			Marine Science Institute
+			University of California
+			Santa Barbara, CA 93106-6150  US
+      805-893-7295
+      harrer@msi.ucsb.edu
+      Lead field technician, analyst
+    
+    2022-10-04
+    english
+    
+      ISP Alginates (formerly Kelco Co.) has collected information on the abundance of giant kelp (Macrocystis pyrifera) in California and Mexico from routine aerial surveys since 1957. The standard protocol consists of an observer visually estimating the amount of harvestable giant kelp biomass within designated kelp beds from a small fixed-wing aircraft. Observations were recorded on paper data sheets in the field and archived in notebooks housed at ISP Alginates. With cooperation from ISP Alginates, the SBCLTER converted ISP Alginates long-term records of giant kelp biomass into a digital format. The database consists of a data table containing kelp biomass, a catalog of maps. The format ISP Alginates used to report kelp abundance data changed periodically over the course of the collecting period. These details, pus descriptions of designated kelp beds are described in the protocol document.
+    
+    
+      biomass
+      giant kelp
+    
+    
+      Historical_kelp
+    
+    
+      Macrocystis pyrifera
+    
+    
+      
+  This data package is released under the Creative Commons License
+  Attribution 4.0 International (CC BY 4.0, see
+  https://creativecommons.org/licenses/by/4.0/). This license states
+  that consumers ("Data Users" herein) may distribute, adapt,
+  reuse, remix, and build upon this work, as long as they give
+  appropriate credit, provide a link to the license, and indicate if
+  changes were made. If redistributed, a Data User may not apply
+  additional restrictions or technological measures that prevent access.
+
+      
+  The Data User has an ethical obligation to cite the data source
+  appropriately in any publication or product that results from its use,
+  and notify the data contact or creator. Communication, collaboration,
+  or co-authorship (as appropriate) with the creators of this data
+  package is encouraged to prevent duplicate research or publication.
+  The Data User is urged to contact the authors of these data if any
+  questions about methodology or results occur. The Data User should
+  realize that these data may be actively used by others for ongoing
+  research and that coordination may be necessary to prevent duplication
+  or inappropriate use. The Data User should realize that
+  misinterpretation may occur if data are used outside of the context of
+  the original study. The Data User should be aware that data are
+  updated periodically and it is the responsibility of the Data User to
+  check for new versions of the data.
+
+      
+  While substantial efforts are made to ensure the accuracy of data and
+  associated documentation, complete accuracy of data sets cannot be
+  guaranteed. This data package (with its components) is made available
+  “as is” and with no warranty of accuracy or fitness for use. The
+  creators of this data package and the repository where these data were
+  obtained shall not be liable for any damages resulting from
+  misinterpretation, use or misuse of the data package or its
+  components.
+
+    
+    
+      
+        https://sbclter.msi.ucsb.edu/
+      
+    
+    https://doi.org/10.6073/pasta/e050dec7b126e00e27e0b44459f0ac94
+      
+        data_coverage_ds14: The Geographic region of the kelp bed data extends along the California coast, down through the coast of Baja, Mexico: Central California (Halfmoon Bay to Purisima Point), Southern California (Point Arguello to the United States/Mexico border including the Channel Islands) and Baja California (points south of the United States/Mexico border including several offshore islands).
+        
+          -122.44
+          -117.15
+          37.38
+          30
+        
+      
+      
+        
+          
+            1957-08-13
+          
+          
+            2006-02-18
+          
+        
+      
+      
+        
+          KINGDOM
+          Plantae
+          
+            PHYLUM
+            Phaeophyta
+            
+              CLASS
+              Phaeophyceae
+              
+                ORDER
+                Laminariales
+                
+                  FAMILY
+                  Lessoniaceae
+                  
+                    GENUS
+                    Macrocystis
+                    
+                      genusSpecies
+                      Macrocystis pyrifera
+                      
+                        commonName
+                        MAPY
+                      
+                    
+                  
+                
+              
+            
+          
+        
+      
+    
+    
+      Information Manager, Santa Barbara Coastal LTER
+      			Marine Science Institute
+			University of California
+			Santa Barbara, California 93106-6150  United States
+      805 893 2071
+      sbclter@msi.ucsb.edu
+      https://sbclter.msi.ucsb.edu/
+    
+    
+    Environmental Data Initiativeinfo@edirepository.orghttps://edirepository.org0330j0z60Environmental Data Initiative
+      
+        
+          
+            
+              
+                
+                  Notes on data collection
+                
+                
+                  Beginning January 8, 1968, data on kelp biomass were occasionally
+                            reported on paper as the sum of multiple beds (e.g. a single value was
+                            reported for beds 2 and 3.) In such cases, the reported tonnage was
+                            split evenly among the combined beds in the digital version.
+                
+                
+                  prior to September 17, 1962, some of the bed designations used by ISP
+                            Alginates differed from those of the California Department of Fish and
+                            Game. Data recorded under these earlier ISP Alginates bed designations
+                            were entered into the database under the corresponding CDFG bed number.
+                            A conversion table of ISP Alginate bed numbers and CDFG bed numbers is
+                            shown below.
+                
+              
+            
+          
+        
+        
+          Overview of Historical Kelp Data Project
+          
+             Reed
+          
+          
+            
+              https://sbclter.msi.ucsb.edu/external/Reef/Protocols/Historical_Kelp/Historical_Kelp_Overview.pdf
+            
+          
+        
+      
+    
+    
+      Santa Barbara Coastal Long Term Ecological Research Project
+      
+        Dr. Robert Miller
+        			Marine Science Institute
+			University of California
+			Santa Barbara, California 93106-6150  United States
+        805 893 6174
+        miller@msi.ucsb.edu
+        Principal Investigator
+      
+      
+        Dr. Dan Reed
+        			Marine Science Institute
+			University of California
+			Santa Barbara, California 93106-6150  United States
+        805 893 8363
+        dan.reed@lifesci.ucsb.edu
+        Co-principal Investigator
+      
+      
+        Dr. Adrian Stier
+        			Department of Ecology, Evolution and Marine Biology
+			University of California
+			Santa Barbara, California 93106-9260  United States
+        805 893 5467
+        adrian.stier@lifesci.ucsb.edu
+        Co-principal Investigator
+      
+      
+        Dr. Gretchen Hoffman
+        			Department of Ecology, Evolution and Marine Biology
+			University of California
+			Santa Barbara, California 93106-9620  United States
+        805 893 6175
+        hofmann@lifesci.ucsb.edu
+        Co-principal Investigator
+      
+      
+        Dr. David Siegel
+        			Institute for Computational Earth System Science
+			University of California
+			Santa Barbara, California 93106-3060  United States
+        805 893 4547
+        davey@icess.ucsb.edu
+        Co-principal Investigator
+      
+      
+        
+          The Santa Barbara Coastal LTER (SBC LTER) is an interdisciplinary research and education program
+established in April 2000 with the goal of developing a predictive understanding of how environmental
+drivers interact with terrestrial and oceanic processes to alter material flows and influence the ecology of
+coastal ecosystems. SBC LTER's principal study domain is the semi-arid coast and nearshore waters of
+the Santa Barbara Channel in southern California, and its diverse and productive marine forests of giant
+kelp (Macrocystis pyrifera) serve as the focal study ecosystem. Analyses of our long-term data have
+identified many of the environmental drivers and ecological processes underlying the production and
+community dynamics of kelp forests. The research proposed to address this question is integrated in a conceptual framework
+that focuses on the causes and ecological consequences of the dynamics of a relatively short-lived
+foundation species in a setting of long-term climate change and human use.
+        
+      
+      
+        
+          NSF Award OCE-9982105, OCE-0620276, OCE-1232779, OCE-1831937
+        
+      
+    
+    
+      Historical kelp biomass
+      Time series of giant kelp biomass along the coasts of California and Baja, Mexico
+      
+        Historical_Kelp_Data.csv
+        2133996
+        
+          
+            1
+            \r\n
+            column
+            
+              ,
+              no
+              "
+            
+          
+        
+        
+          
+            https://pasta.lternet.edu/package/data/eml/knb-lter-sbc/14/14/fafc68dff2f9ef12d420a0fcbcb74a66
+          
+        
+      
+      
+        
+          
+            
+              Bed numbers in Central and Southern California
+were assigned by the California Department of Fish and Game; bed numbers in Baja region were assigned by ISP Alginates. Note that are some bed numbers were used in both the Southern and Baja regions, but refer to distinct beds in each region.
+              A table of bed numbers and corresponding name, location, length of coastline encompassed by the bed,  size, and description of the bed boundaries is shown in Table 1 of the protocol document.
+            
+          
+        
+      
+      
+        
+          date
+          Date of the Survey
+          The Date of the aerial survey
+          date
+          
+            
+              MM/DD/YYYY
+              1
+            
+          
+          
+            -999999
+            not available, or not collected
+          
+        
+        
+          year
+          Year
+          Year survey occurred
+          date
+          
+            
+              YYYY
+              1
+            
+          
+          
+            -99999
+            not available, or not collected
+          
+        
+        
+          month
+          Calendar Month
+          Calednar month survey occurred
+          date
+          
+            
+              MM
+              1
+            
+          
+          
+            -99999
+            not available, or not collected
+          
+        
+        
+          day
+          Calendar Day
+          Day of the month survey occurred
+          date
+          
+            
+              DD
+              1
+            
+          
+          
+            -99999
+            not available, or not collected
+          
+        
+        
+          region
+          Geographic Region
+          The geographic region of the bed, Central, Southern or Baja California
+          string
+          
+            
+              
+                
+                  
+                    Central
+                    Central California (Half Moon Bay to Purisima Point)
+                  
+                  
+                    Southern
+                    Southern California (Point Arguello to the United States/Mexico border including the Channel Islands)
+                  
+                  
+                    Baja
+                    Baja California (points south of the United States/Mexico border including several offshore islands)
+                  
+                
+              
+            
+          
+          
+            -99999
+            not available, or not collected
+          
+        
+        
+          bed_number
+          Kelp Bed Code
+          Bed numbers in California (central and southern) and Baja were assigned by different bodies and are unique only within a region. (see Methods)
+          string
+          
+            
+              
+                
+                  any text
+                
+              
+            
+          
+          
+            -99999
+            not available, or not collected
+          
+        
+        
+          bed_name
+          Bed Name
+          Common name of kelp bed (98 beds total)
+          string
+          
+            
+              
+                
+                  any text
+                
+              
+            
+          
+          
+            -99999
+            not available, or not collected
+          
+        
+        
+          harvested
+          Harvested Kelp
+          Amount of kelp harvested (tons) since the previous survey. Note: harvest data are only available after March 25, 1991.
+          float
+          
+            
+              
+                ton
+              
+              1
+              
+                real
+                
+                  0.0
+                  100000
+                
+              
+            
+          
+          
+            -99999
+            not available, or not collected
+          
+        
+        
+          total
+          Total Biomass
+          Total biomass (tons) of kelp in the bed observed by the aerial survey. note: In early surveys, ISP Alginates labeled this column "Maximum".
+          float
+          
+            
+              
+                ton
+              
+              1
+              
+                real
+                
+                  0.0
+                  100000
+                
+              
+            
+          
+          
+            -99999
+            not available, or not collected
+          
+        
+        
+          available
+          Amount of Avalaible Kelp
+          Amount of kelp (tons) available and accessible for harvesting. In early surveys ISP Alginates labeled this column "Minimum".
+          float
+          
+            
+              
+                ton
+              
+              1
+              
+                real
+                
+                  0.0
+                  100000
+                
+              
+            
+          
+          
+            -99999
+            not available, or not collected
+          
+        
+        
+          date_of_previous_survey
+          Date of Previous Survey
+          Date of the previous aerial survey.
+          date
+          
+            
+              mm/dd/yyyy
+              1
+            
+          
+          
+            -999999
+            not available, or not collected
+          
+        
+        
+          notes
+          Notes
+          Observer notes
+          string
+          
+            
+              
+                
+                  any text
+                
+              
+            
+          
+          
+            -99999
+            not available, or not collected
+          
+        
+      
+    
+  
+  
+    
+      
+        
+          standard US (short) ton = 2000 lbs
+        
+      
+    
+  
