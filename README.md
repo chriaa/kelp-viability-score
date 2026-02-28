@@ -35,6 +35,53 @@ The following datasets are used to train the model and establish "truly viable" 
 * **Anomalies:** SSTA is calculated against a 30-year baseline to identify extreme heat events (e.g., Marine Heatwaves).
 * **Upwelling:** CUTI data is averaged quarterly to align with seasonal growth cycles of the kelp canopy.
 
+## 🌊 CUTI (Coastal Upwelling Transport Index) - Output Interpretation
+
+### What is CUTI?
+
+The **Coastal Upwelling Transport Index (CUTI)** measures the intensity of coastal upwelling—the process where deep, cold, nutrient-rich water is driven to the ocean surface. This is **critically important for kelp** because:
+
+- **Nutrient delivery:** Deep water is rich in nitrogen and phosphorus, which kelp requires for growth
+- **Temperature regulation:** Cold upwelled water helps maintain optimal kelp temperatures (5–14°C)
+- **Oxygen supply:** Enhanced water mixing increases dissolved oxygen
+
+### CUTI Output Values & Interpretation
+
+CUTI is a **continuous index** that can range from negative to positive values. It's calculated quarterly and represents the magnitude and direction of upwelling.
+
+| **CUTI Range** | **Interpretation** | **Kelp Impact** |
+| --- | --- | --- |
+| **< -0.5** | Strong downwelling (water sinking) | ❌ Poor conditions: Warm, nutrient-poor water |
+| **-0.5 to 0** | Weak/negative upwelling | ⚠️ Marginal: Limited nutrient delivery |
+| **0 to 0.5** | Weak/moderate upwelling | ✅ Good: Adequate nutrient delivery |
+| **0.5 to 1.0** | Strong upwelling | ✅✅ Excellent: Robust nutrient delivery |
+| **> 1.0** | Intense upwelling | ✅✅✅ Optimal: Maximum nutrient-rich conditions |
+
+### Typical California CUTI Values
+
+Based on the training dataset (1988–2025):
+- **Mean CUTI:** 0.429 (indicating generally favorable upwelling conditions)
+- **Range:** -0.335 to 1.847
+- **Seasonal patterns:** Strongest upwelling typically occurs in spring/summer (Q2–Q3)
+
+### How CUTI Drives the Kelp Viability Model
+
+In the trained kelp viability model:
+- **CUTI accounts for 55.3% of the model's predictive power**—the strongest single driver of kelp viability
+- Higher CUTI values → higher predicted viability scores (0–1)
+- Example relationship:
+  - CUTI = 0.80 (strong upwelling) → Predicted viability ≈ 0.076–0.093
+  - CUTI = 0.00 (neutral) → Predicted viability ≈ 0.064
+  - CUTI = -0.20 (weak downwelling) → Predicted viability ≈ 0.000
+
+### CUTI Data Source & Availability
+
+- **Source:** [Jacox Upwelling Indices](https://mjacox.com/upwelling-indices/)
+- **Temporal coverage:** 1988–2025
+- **Spatial resolution:** Latitude bands (31N–47N for California coast)
+- **Temporal resolution:** Quarterly averages
+- **Status in project:** ✅ Fully integrated with 100% coverage in ML training dataset
+
 ---
 
 ---
@@ -102,7 +149,7 @@ Trains a continuous kelp viability prediction model using Gradient Boosting Regr
 
 **Model Specification:**
 
-- **Type:** Gradient Boosting Regressor
+- **Type:** Gradient Boosting Regressor (tree‑based ensemble used for regression)
 - **Output:** Continuous viability score (0.0 to 1.0, NOT binary)
   - 0 = Very low viability (kelp unlikely to be present/abundant)
   - 0.5 = Moderate viability
@@ -124,6 +171,15 @@ Trains a continuous kelp viability prediction model using Gradient Boosting Regr
 | ------- | ---------- |
 | CUTI    | 55.3%      |
 |         |            |
+
+> The model computes importance by summing the reduction in squared error
+> contributed by splits on each variable and normalizing to 100 %.  In a
+> three‑feature model that sum is 1.0, so CUTI’s score of 0.553 tells us that
+> **more than half of the model’s explanatory power comes from CUTI alone**.
+> That quantitative dominance is why we say CUTI is the strongest driver: if
+> all features were equally weighted they would each be ~33 %, so 55 % is a
+> clear outlier and indicates the model relies heavily on upwelling intensity
+> to predict kelp viability.
 
 **Example Predictions:**
 
