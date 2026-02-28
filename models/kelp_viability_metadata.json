@@ -1,0 +1,27 @@
+{
+  "feature_columns": [
+    "CUTI",
+    "lat",
+    "lon"
+  ],
+  "feature_importance": {
+    "CUTI": 0.5533643824338244,
+    "lat": 0.23284720837262596,
+    "lon": 0.21378840919354988
+  },
+  "training_date": "2026-02-28T14:53:32.098073",
+  "training_samples": 1200,
+  "test_samples": 300,
+  "train_r2": 0.758326025363556,
+  "test_r2": 0.3066088869140945,
+  "train_rmse": 0.0569921596914617,
+  "test_rmse": 0.11283363299345639,
+  "train_mae": 0.032400470263861066,
+  "test_mae": 0.054705938633646756,
+  "model_type": "GradientBoostingRegressor",
+  "output_range": [
+    0,
+    1
+  ],
+  "output_description": "Continuous kelp viability score (0=low, 1=high)"
+}

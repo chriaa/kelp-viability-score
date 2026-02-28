@@ -1,0 +1,65 @@
+
+ML TRAINING DATA CREATION - METHODOLOGY NOTES
+==============================================
+
+DATE CREATED: 2026-02-28 14:44:46
+
+1. KELP BED COORDINATES (Temporary Solution)
+   - Since actual polygon centroid data is not available in the current dataset,
+     synthetic centroids were generated based on bed numbering patterns and 
+     known geographic distribution of California kelp beds.
+   - Southern CA beds (1-30): Estimated around 32-34°N, 119-120°W
+   - Central Coast beds (31-50): Estimated around 34-36°N, 120-121°W  
+   - Northern CA beds (51+): Estimated around 36-39°N, 121-123°W
+   - These coordinates are ESTIMATES and should be replaced with actual 
+     polygon centroids when available.
+   
+   ACTION REQUIRED: Obtain polygon geometry data for all kelp beds and 
+   calculate true centroids for improved accuracy.
+
+2. CUTI INTEGRATION (Coastal Upwelling Transport Index)
+   - Each kelp bed observation is matched to the nearest available CUTI 
+     latitude band (31N, 32N, ..., 47N) based on estimated latitude.
+   - Matching uses the quarter of the observation year.
+   - If a kelp observation doesn't have a matching CUTI entry, the value is NaN.
+   
+   APPROACH: Nearest-neighbor latitude band matching
+   NOTES: CUTI data is quarterly. Observations are assigned to the quarter
+          they fall in (Q1: Jan-Mar, Q2: Apr-Jun, Q3: Jul-Sep, Q4: Oct-Dec)
+
+3. SSTA INTEGRATION (Sea Surface Temperature Anomaly)
+   - Only 2 timesteps of SSTA data are available: 2009-03-01 and 2009-06-01 :(
+   - For observations within this date range, SSTA values are extracted at 
+     the nearest grid cell to the estimated kelp bed location.
+   - For observations outside this date range, SSTA is NaN.
+   
+   APPROACH: Nearest grid cell spatial matching for available dates
+   LIMITATION: Very limited temporal coverage (only 2 dates in 10-year span)
+   
+   ACTION REQUIRED: Obtain complete SSTA dataset covering 2000-2010 
+   for better temporal integration.
+
+4. TARGET VARIABLE
+   - Set to 1 if TOTAL kelp biomass > 0 (kelp is present)
+   - Set to 0 if TOTAL kelp biomass = 0 (no kelp observed)
+   - Can be used as classification target: presence/absence of kelp
+
+5. DATA QUALITY NOTES
+   - 1500 total observations in 2000+ kelp dataset
+   - 1500 observations have valid coordinates and are included
+   - 1500 observations matched with CUTI data (100.0%)
+   - 0 observations matched with SSTA data (0.0%)
+   - 0 observations have all features (no NaN values)
+
+6. MISSING VALUES
+   - CUTI: Missing when no matching year/quarter found in CUTI dataset
+   - SSTA: Missing for observations outside 2009-03-01 to 2009-06-01 date range
+           and for grid cells with invalid/missing SSTA values
+   - Handle missing values in ML preprocessing (imputation, removal, or as feature)
+
+7. RECOMMENDATIONS FOR NEXT STEPS
+   a) Obtain polygon geometry and compute true centroids for all kelp beds
+   b) Acquire complete SSTA daily or monthly data for 2000-2010
+   c) Validate coordinate estimates by cross-referencing with regional maps
+   d) Consider other environmental variables (temperature, nutrients, etc.)
+   e) Evaluate feature importance to identify key drivers of kelp presence/absence

@@ -1,0 +1,104 @@
+
+KELP VIABILITY MODEL - TRAINING SUMMARY REPORT
+===============================================
+
+Training Date: 2026-02-28 14:53:32
+
+MODEL SPECIFICATION
+-------------------
+Model Type: Gradient Boosting Regressor
+Output Type: Continuous score (0 to 1)
+- 0 = Very low viability (kelp unlikely to be present/abundant)
+- 1 = Very high viability (kelp very likely to be present/abundant)
+
+TRAINING DATA
+-------------
+Total observations: 1500
+Training set: 1200 samples
+Test set: 300 samples
+Valid samples (no missing values): 1500
+Removed samples: 0
+
+TARGET VARIABLE (Kelp Viability Score)
+---------------------------------------
+Calculation: TOTAL kelp biomass / maximum observed biomass
+Range: 0 to 1
+Mean: 0.0698
+Std Dev: 0.1202
+Min: 0.0000
+Max: 1.0000
+
+INPUT FEATURES
+--------------
+1. CUTI (Coastal Upwelling Transport Index)
+   - Range: -0.3347 to 1.8467
+   - Mean: 0.4290
+   - Std Dev: 0.3447
+
+2. Latitude (degrees North)
+   - Range: 32.55°N to 50.17°N
+   - Mean: 36.94°N
+   - Std Dev: 4.50°
+
+3. Longitude (degrees West)
+   - Range: -130.00°W to -119.53°W
+   - Mean: -122.16°W
+   - Std Dev: 2.63°
+
+FEATURE IMPORTANCE
+------------------
+CUTI           : 0.5534
+lat            : 0.2328
+lon            : 0.2138
+
+MODEL PERFORMANCE
+-----------------
+Training Set:
+  R² Score: 0.7583
+  RMSE: 0.0570
+  MAE: 0.0324
+
+Test Set:
+  R² Score: 0.3066
+  RMSE: 0.1128
+  MAE: 0.0547
+
+Interpretation:
+  R² Score: Proportion of variance explained (0.0-1.0, higher is better)
+  RMSE: Root mean squared error in viability score units
+  MAE: Mean absolute error in viability score units
+
+MODEL FILES
+-----------
+Model: models/kelp_viability_model.pkl
+Scaler: models/kelp_viability_scaler.pkl
+Metadata: models/kelp_viability_metadata.json
+Predictor Script: models/predict_kelp_viability.py
+
+USAGE
+-----
+Python API:
+  from create_kelp_viability_model import predict_kelp_viability
+  viability = predict_kelp_viability(cuti=0.5, latitude=34.0, longitude=-120.5)
+
+Command Line:
+  python models/predict_kelp_viability.py
+
+EXAMPLE PREDICTIONS
+-------------------
+Central CA coast (CUTI=0.5, Lat=34.0°N, Lon=-120.5°W):
+  Viability: 0.019
+
+Southern CA coast (CUTI=-0.2, Lat=32.5°N, Lon=-119.5°W):
+  Viability: 0.000
+
+Northern CA coast (CUTI=0.8, Lat=36.0°N, Lon=-121.5°W):
+  Viability: 0.076
+
+NOTES
+-----
+- The model outputs a continuous score between 0 and 1, not binary classification
+- CUTI (upwelling) is typically the strongest predictor of kelp viability
+- Geographic location (latitude) also plays an important role
+- Model should be retrained when new data becomes available
+- For production use, consider ensemble methods or cross-validation results
